@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">8a-android</string>
+
+    <string name="txt_wwl">WWL</string>
+
+    <!--select news-->
+    <string name="txt_watch_news">Watch News</string>
+    <string name="txt_report_news">Report News</string>
+    
+    <!--enter phone number-->
+    <string name="txt_description_enter_phone_number">Please sign in to WWL. You will be texted a confirmation code</string>
+    <string name="txt_hint_phone_number">Phone number</string>
+    <string name="txt_get_confirmation_code">Get Confirmation Code</string>
+
+    <!--sms code-->
+    <string name="txt_description_enter_sms_number">We just texted you a confirmation code.\n Please enter it below.</string>
+
 </resources>

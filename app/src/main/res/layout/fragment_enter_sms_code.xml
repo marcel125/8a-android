@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginStart="@dimen/dimen_16"
+        android:layout_marginEnd="@dimen/dimen_16">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txt_description_enter_sms_number"/>
+
+        <EditText
+            android:id="@+id/edt_sms_code"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Sms code"
+            android:layout_marginTop="@dimen/dimen_10"
+            android:inputType="number"/>
+
+        <Button
+            android:id="@+id/btn_next"
+            android:layout_width="@dimen/dimen_160"
+            android:layout_height="wrap_content"
+            android:text="next"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/dimen_20"/>
+
+        <Button
+            android:id="@+id/btn_did_not_receive"
+            android:layout_width="@dimen/dimen_160"
+            android:layout_height="wrap_content"
+            android:text="I did not receive it"
+            android:textAllCaps="false"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/dimen_20"/>
+
+    </LinearLayout>
+
+</LinearLayout>
