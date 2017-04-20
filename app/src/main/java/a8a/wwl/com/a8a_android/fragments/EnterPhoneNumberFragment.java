@@ -49,18 +49,19 @@ public class EnterPhoneNumberFragment extends BaseFragment {
 
     @OnClick(R.id.btn_get_sms_code)
     public void onClickEditPhoneNumber(){
-        final String number = edtPhoneNumber.getText().toString();
+        String number = edtPhoneNumber.getText().toString();
 
         if (number.isEmpty()){
             Toast.makeText(getContext(), "Enter phone number", Toast.LENGTH_SHORT).show();
             return;
         }
+        final String fullNumber = "+" + number;
 
-        ServiceApi.newInstance().getSmsCode(number, new ResponseCallBack<SmsCodeResponse>() {
+        ServiceApi.newInstance().getSmsCode(fullNumber, new ResponseCallBack<SmsCodeResponse>() {
             @Override
             public void onSuccess(SmsCodeResponse data) {
                 if (data.getSuccess().equals(STATUS_SUCCESS))
-                    startFragment(R.id.fl_container, EnterSmsCodeFragment.newInstance(number));
+                    startFragment(R.id.fl_container, EnterSmsCodeFragment.newInstance(fullNumber));
                 else
                     Toast.makeText(getContext(), data.getMessage(), Toast.LENGTH_SHORT).show();
             }

@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import a8a.wwl.com.a8a_android.R;
+import a8a.wwl.com.a8a_android.activities.MainActivity;
 import a8a.wwl.com.a8a_android.controllers.TokenController;
 import butterknife.ButterKnife;
 import butterknife.OnClick;

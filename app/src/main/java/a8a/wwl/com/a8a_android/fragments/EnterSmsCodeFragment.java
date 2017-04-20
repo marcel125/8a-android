@@ -11,6 +11,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import a8a.wwl.com.a8a_android.R;
+import a8a.wwl.com.a8a_android.activities.MainActivity;
 import a8a.wwl.com.a8a_android.api.ResponseCallBack;
 import a8a.wwl.com.a8a_android.api.ServiceApi;
 import a8a.wwl.com.a8a_android.api.responses.SmsCodeResponse;
@@ -70,14 +71,7 @@ public class EnterSmsCodeFragment extends BaseFragment {
             public void onSuccess(TokenResponse data) {
 
                 TokenController.getInstance().saveToken(data.getToken());
-                getActivity().getSupportFragmentManager().popBackStack(null, FragmentManager.POP_BACK_STACK_INCLUSIVE);
-                Handler handler = new Handler();
-                handler.postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
-                        startFragment(R.id.fl_container, MyProfileFragment.newInstance());
-                    }
-                }, 100);
+                ((MainActivity) getActivity()).addProfileFragment();
             }
 
             @Override

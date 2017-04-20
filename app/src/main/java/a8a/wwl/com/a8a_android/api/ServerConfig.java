@@ -21,8 +21,8 @@ public class ServerConfig {
     public static final String MSG_VERIFY_FAILED = "Failed to verify, Please try again";
     public static final String MSG_PARSING_ERROR = "Parsing error";
 
-    public static final String SERVER_ADDRESS = "http://dev-api.wwl.tv";
-    public static final String END_POINT = "/api/v1/";
+    public static final String SERVER_ADDRESS = "http://dev-api.wwl.tv/";
+    public static final String END_POINT = "api/v1/";
 
     public static final String GET_SMS_CODE = END_POINT + "login/request-code";
     public static final String USER_LOG_IN = END_POINT + "login";

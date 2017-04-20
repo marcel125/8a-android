@@ -1,6 +1,92 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-</LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginStart="@dimen/dimen_16">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/dimen_34"
+            android:text="My Profile"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/dimen_30"/>
+
+        <ImageView
+            android:id="@+id/iv_avatar"
+            android:layout_width="@dimen/dimen_50"
+            android:layout_height="@dimen/dimen_50"
+            android:layout_marginTop="@dimen/dimen_20"
+            android:src="@drawable/ic_person"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_16"
+            android:text="Name"/>
+        
+        <EditText
+            android:id="@+id/edt_user_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:lines="1"
+            android:inputType="text"
+            android:hint="User Name"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_16"
+            android:text="Bio"/>
+
+        <EditText
+            android:id="@+id/edt_user_bio"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:inputType="text"
+            android:hint="Description"/>
+
+
+        <Button
+            android:id="@+id/btn_logout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/dimen_16"
+            android:drawableLeft="@drawable/ic_logout"
+            android:text="Log Out"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_cancel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="cancel"/>
+
+            <Button
+                android:id="@+id/btn_save"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="save"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</ScrollView>
